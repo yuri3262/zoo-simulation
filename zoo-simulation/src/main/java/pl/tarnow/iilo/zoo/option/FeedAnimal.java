@@ -29,5 +29,7 @@ public class FeedAnimal implements MenuOption {
         Helper.printList(animalList);
         final int animalChoice = scanner.nextInt();
         animalList.get(animalChoice-1).feed();
+        System.out.println();
+
     }
 }

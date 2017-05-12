@@ -31,6 +31,11 @@ public abstract class Animal {
 
     public void feed(){
         health+=10;
-        System.out.println("Hi her ie " +  name + " I just got fed");
+        System.out.println("Hi here is " +  name + " I just got fed");
+    }
+    public void changeName(String newName){
+        System.out.println("Hi here is "+name+" My new name is: "+newName);
+        this.name=newName;
+
     }
 }

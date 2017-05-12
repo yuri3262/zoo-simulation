@@ -3,6 +3,7 @@ package pl.tarnow.iilo.zoo;
 import pl.tarnow.iilo.zoo.animal.Cat;
 import pl.tarnow.iilo.zoo.animal.RhinocerosBeetle;
 import pl.tarnow.iilo.zoo.option.BuyAnimal;
+import pl.tarnow.iilo.zoo.option.ChangeAnimalName;
 import pl.tarnow.iilo.zoo.option.FeedAnimal;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class Program {
 
         Menu menu = new Menu(zoo, optionList);
 
-        System.out.println("At the begining of the simulation in zoo" + zoo.getName() +" inventory is:");
+        System.out.println("At the begining of the simulation in zoo \"" + zoo.getName() +"\" inventory is:");
         printAllAnimalsInZoo();
 
         for(int i=0; i<105; i++){
@@ -42,6 +43,7 @@ public class Program {
         optionList = new ArrayList<MenuOption>();
         optionList.add(new FeedAnimal());
         optionList.add(new BuyAnimal());
+        optionList.add(new ChangeAnimalName());
     }
 
     private static void printAllAnimalsInZoo() {
@@ -51,7 +53,7 @@ public class Program {
     }
 
     private static void initializeZoo() {
-        Cat catMaciek = new Cat("Maciek", Integer.MAX_VALUE);
+        Cat catMaciek = new Cat("Maciek", 100);
         RhinocerosBeetle rhinoStephen = new RhinocerosBeetle("Stephen", 100,"My tail is amazing");
         zoo = new Zoo("My zoo");
         zoo.addAnimal(catMaciek);

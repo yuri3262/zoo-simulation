@@ -11,5 +11,4 @@ public class Alpaca extends Animal {
     public static Alpaca createSpecimen(){
         return new Alpaca("Alpaca Default name", 100);
     }
-// zmiana
 }
